@@ -28,6 +28,7 @@ import CreateCardPage from "../cards/pages/CreateCardPage";
 import EditCardPage from "../cards/pages/EditCardPage";
 import FavCardsPage from "../cards/pages/FavCardsPage";
 import EditUserPage from "../users/pages/EditUserPage";
+import AdminCrm from "../users/pages/AdminCrm";
 
 const Router = () => {
   return (
@@ -45,6 +46,7 @@ const Router = () => {
 
 
       <Route path={ROUTES.SIGNUP} element={<SignupPage />} />
+      <Route path={ROUTES.CRM} element={<AdminCrm />} />
       <Route path={ROUTES.SANDBOX} element={<SandBox />}>                 {/** /sandbox */}
         <Route path="todo" element={<SetArray />} />                      {/** /sandbox/todo */}
         <Route path="custom-counter-hook" element={<CustomCounterHook />} />                      {/** /sandbox/todo */}

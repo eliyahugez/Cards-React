@@ -36,6 +36,7 @@ const MyCardsPage = () => {
           onClick={() => navigate(ROUTES.CREATE_CARD)}
           color="primary"
           aria-label="add"
+          tooltipTitle={"Add Card"}
           sx={{
             position: "absolute",
             bottom: 75,

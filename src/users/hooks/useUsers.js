@@ -44,6 +44,7 @@ const useUsers = () => {
     const handleLogout = useCallback(() => {
         removeToken();
         setUser(null);
+        navigate(ROUTES.LOGIN)
     }, [setUser]);
 
     const handleGetUser = useCallback(
@@ -103,6 +104,7 @@ const useUsers = () => {
         isLoading,
         error,
         user,
+        value
     }
 };
 
