@@ -11,16 +11,16 @@ const CardDeleteDialog = ({ isDialogOpen, onDelete, onChangeDialog }) => {
             maxWidth="xs"
         >
             <DialogTitle id="alert-dialog-title">
-                {"Are you sure you want to delete this card?"}
+                {"Are you sure you want to delete?"}
             </DialogTitle>
             <DialogContentText id="alert-dialog-description">
-                This operation will completely delete the business card and all its
+                This operation will completely delete and all the
                 data from the database and it will not be possible to retrieve the
-                card afterwards
+                afterwards
             </DialogContentText>
             <DialogActions>
                 <Button onClick={onChangeDialog} autoFocus color="info">Cancel</Button>
-                <Button onClick={onDelete} color="error">Delete card</Button>
+                <Button onClick={onDelete} color="error">Delete</Button>
             </DialogActions>
         </Dialog>
     );

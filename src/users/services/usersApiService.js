@@ -28,12 +28,30 @@ export const EditUser = async (id, user) => {
       return Promise.reject(error.message);
     }
   };
+  export const getUsersApi = async () => {
+    try {
+      const { data } = await axios.get(`${apiUrl}/users`);
+      return data;
+    } catch (error) {
+      return Promise.reject(error.message);
+    }
+  };
 
 export const signup = async normalizedUser => {
     try {
         const { data } = await axios.post(`${apiUrl}/users`, normalizedUser);
+        console.log(data);
         return data;
     } catch (error) {
         return Promise.reject(error.message);
     }
+}
+
+export const deleteUser = async (_id) => {
+  try {
+      const { data } = await axios.delete(`${apiUrl}/users/${_id}`);
+      return data;
+  } catch (error) {
+      return Promise.reject(error.message);
+  }
 }

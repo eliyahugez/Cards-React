@@ -3,19 +3,24 @@ import PageHeader from "../../components/PageHeader";
 import { useEffect } from "react";
 import CardsFeedback from "../components/CardsFeedback";
 import useCards from "../hooks/useCards";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import ROUTES from "../../routes/routesModel";
 import { useUser } from "../../users/providers/UserProvider";
+import { useSnackbar } from "../../providers/SnackbarProvider";
 
 const CardsPage = () => {
   const { value, handleGetCards, handleDeleteCard } = useCards();
   const { cards, error, isPending, filteredCards } = value;
   const navigate = useNavigate();
+  const snack = useSnackbar();
   const { user } = useUser();
   useEffect(() => {
     handleGetCards();
   }, []);
+  if (!user.isBusiness) {
+    snack("Only a Business User can add a new card", 'warning')
+  }
 
   const onDeleteCard = async (cardId) => {
     await handleDeleteCard(cardId);
@@ -56,7 +61,7 @@ const CardsPage = () => {
             onClick={() => navigate(ROUTES.SIGNUP)}
             color="primary"
             aria-label="add"
-            tooltipTitle={"Add Card"}
+
             sx={{
               position: "absolute",
               bottom: 75,

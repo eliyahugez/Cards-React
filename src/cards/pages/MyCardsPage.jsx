@@ -7,11 +7,12 @@ import PageHeader from "../../components/PageHeader";
 import AddIcon from "@mui/icons-material/Add";
 import CardsFeedback from "../components/CardsFeedback";
 import { useEffect } from "react";
+import { useSnackbar } from "../../providers/SnackbarProvider";
 
 const MyCardsPage = () => {
   const { value, handleGetMyCards, handleDeleteCard } = useCards();
   const { cards, error, isPending } = value;
-
+  const snack = useSnackbar();
   const { user } = useUser();
   const navigate = useNavigate();
 
@@ -19,7 +20,7 @@ const MyCardsPage = () => {
     if (!user) navigate(ROUTES.CARDS);
     else handleGetMyCards();
   }, [user]);
-
+  snack("Only a Business User can add a new card", 'warning')
   const onDeleteCard = async (cardId) => {
     await handleDeleteCard(cardId); // this will delete the card from the DB
     await handleGetMyCards();
@@ -36,7 +37,6 @@ const MyCardsPage = () => {
           onClick={() => navigate(ROUTES.CREATE_CARD)}
           color="primary"
           aria-label="add"
-          tooltipTitle={"Add Card"}
           sx={{
             position: "absolute",
             bottom: 75,

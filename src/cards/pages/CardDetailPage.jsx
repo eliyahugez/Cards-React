@@ -170,7 +170,8 @@ const CardDetailPage = () => {
                 <SpeedDialAction
                   key={action.name}
                   icon={action.icon}
-                  tooltipTitle={action.name}
+
+
                 />
               ))}
             </SpeedDial>

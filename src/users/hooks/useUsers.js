@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from "react";
 import { useNavigate } from "react-router";
 import { useUser } from "../providers/UserProvider";
 import useAxios from "../../cards/hooks/useAxios";
-import { getUserApi, EditUser, login, signup } from "../services/usersApiService";
+import { getUserApi, EditUser, login, signup, getUsersApi } from "../services/usersApiService";
 import { getUser, removeToken, setTokenInLocalStorage } from "../services/localStorageService";
 import ROUTES from "../../routes/routesModel";
 import normalizeUser from "../helpers/normalization/normalizeUser";
@@ -59,6 +59,18 @@ const useUsers = () => {
         },
         [requestStatus, handleLogin]
       );
+    const handleGetUsers = useCallback(
+        async () => {
+          try {
+            const users = await getUsersApi();
+            requestStatus(false, null, users, user);
+            return users;
+          } catch (error) {
+            requestStatus(false, error, null);
+          }
+        },
+        [requestStatus]
+      );
 
     const handleEditUser = useCallback(
         async (id, userFormClient) => {
@@ -100,6 +112,7 @@ const useUsers = () => {
         handleGetUser,
         handleEditUser,
         useMemo,
+        handleGetUsers,
         users,
         isLoading,
         error,
