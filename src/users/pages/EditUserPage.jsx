@@ -2,15 +2,12 @@ import { Navigate, useNavigate } from "react-router-dom";
 import useForm from "../../forms/hooks/useForm";
 import useUsers from "../hooks/useUsers";
 import { useUser } from "../providers/UserProvider";
-// import signupSchema from "../models/joi-schema/signupSchema";
 import { useEffect } from "react";
 import mapUserToModel from "../helpers/normalization/mapUserToModel";
 import ROUTES from "../../routes/routesModel";
 import initialSignupForm from "../helpers/initialForms/initialSignupForm";
 import normalizeUser from "../helpers/normalization/normalizeUser";
 import { Checkbox, Container, FormControlLabel, Grid } from "@mui/material";
-// import Form from "../../forms/components/Form";
-// import Input from "../../forms/components/Input";
 import editUserSchema from "../models/joi-schema/editUserSchema";
 import FormInput from "../../forms/components/FormInputs";
 

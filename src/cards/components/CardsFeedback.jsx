@@ -1,10 +1,10 @@
-import { arrayOf, bool, func, object, oneOfType, string } from "prop-types"
+import { arrayOf, bool, func, string } from "prop-types"
 import Spinner from "../../components/Spinner"
 import Cards from "./Cards"
 import cardType from "../models/types/cardType"
 import Error from "../../components/Error"
 
-const CardsFeedback = ({ isPending, error, cards, onDelete ,onLike }) => {
+const CardsFeedback = ({ isPending, error, cards, onDelete, onLike }) => {
     if (isPending) return <Spinner />
     if (error) return <Error errorMessage={error} />
     if (cards && !cards.length) {
@@ -26,7 +26,7 @@ CardsFeedback.propTypes = {
 }
 
 CardsFeedback.defaultProps = {
-    onLike: () => {},
-  };
+    onLike: () => { },
+};
 
 export default CardsFeedback;

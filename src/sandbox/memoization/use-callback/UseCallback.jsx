@@ -1,5 +1,4 @@
 import React, { useState, useCallback, useEffect } from "react";
-import ButtonComp from "./ButtonComp";
 
 const UseCallback = () => {
     const [number, setNumber] = useState(1);

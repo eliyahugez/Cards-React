@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Checkbox, Container, IconButton, Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@mui/material";
-import { CheckBox, Delete, Edit } from "@mui/icons-material";
+import { Delete, Edit } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { useSnackbar } from "../../providers/SnackbarProvider";
 import CardDeleteDialog from "../../cards/components/card/CardDeleteDialog";
 import PageHeader from "../../components/PageHeader";
-import { useUser } from "../providers/UserProvider";
 import ROUTES from "../../routes/routesModel";
 import { deleteUser } from "../services/usersApiService";
-import useForm from "../../forms/hooks/useForm";
-import editUserSchema from "../models/joi-schema/editUserSchema";
-import initialSignupForm from "../helpers/initialForms/initialSignupForm";
-import normalizeUser from "../helpers/normalization/normalizeUser";
-import mapUserToModel from "../helpers/normalization/mapUserToModel";
 import useUsers from "../hooks/useUsers";
 import axios from "axios";
 
@@ -89,7 +83,6 @@ const AdminCrm = () => {
                                 <TableCell>Phone</TableCell>
                                 <TableCell>Email</TableCell>
                                 <TableCell>Is Business</TableCell>
-                                <TableCell>Edit</TableCell>
                                 <TableCell>Delete</TableCell>
                             </TableRow>
                         </TableHead>
@@ -107,11 +100,6 @@ const AdminCrm = () => {
                                     </TableCell>
                                     <TableCell>
                                         <Checkbox checked={user.isBusiness} color="primary" onChange={(event) => handleIsBusinessChange(event, user)} />
-                                    </TableCell>
-                                    <TableCell>
-                                        <IconButton>
-                                            <Edit />
-                                        </IconButton>
                                     </TableCell>
                                     <TableCell>
                                         <IconButton onClick={() => {
