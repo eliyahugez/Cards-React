@@ -18,9 +18,7 @@ const CardsPage = () => {
   useEffect(() => {
     handleGetCards();
   }, []);
-  if (!user.isBusiness) {
-    snack("Only a Business User can add a new card", 'warning')
-  }
+
 
   const onDeleteCard = async (cardId) => {
     await handleDeleteCard(cardId);
@@ -46,7 +44,6 @@ const CardsPage = () => {
             onClick={() => navigate(ROUTES.CREATE_CARD)}
             color="primary"
             aria-label="add"
-            tooltipTitle={"Add Card"}
             sx={{
               position: "absolute",
               bottom: 75,
@@ -56,7 +53,7 @@ const CardsPage = () => {
             <AddIcon />
           </Fab>
         )}
-        {user && (!user.isBusiness || !user.isAdmin) || !user && (
+        {user && (!user.isBusiness || !user.isAdmin || !user) && (
           <Fab
             onClick={() => navigate(ROUTES.SIGNUP)}
             color="primary"
