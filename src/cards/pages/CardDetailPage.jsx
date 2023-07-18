@@ -10,7 +10,9 @@ import { deleteCard, getCard } from '../services/cardApiService'
 import ROUTES from '../../routes/routesModel';
 import { useSnackbar } from '../../providers/SnackbarProvider';
 
+
 const CardDetailPage = () => {
+
   const { id } = useParams();
   const { value: { card }, handleGetCard } = useCards();
   const { user } = useUser();
@@ -20,12 +22,9 @@ const CardDetailPage = () => {
   const snack = useSnackbar();
   const [isLike, setLike] = useState(false)
 
-
   useEffect(() => {
     handleGetCard(id);
   }, [id]);
-
-
 
   useEffect(() => {
     getCard(id).then(id => {
@@ -101,64 +100,48 @@ const CardDetailPage = () => {
   return (
     <>
       {card &&
-        <Paper elevation={3} sx={{ padding: 2, position: "relative", minHeight: "92vh" }}>
-          <Typography spacing={2} sx={{ marginTop: 2 }} variant="h3">Card Business Page </Typography>
-          <Divider variant="middle" />
-          <Typography variant="h5">{card.title}</Typography>
-          <Typography variant="subtitle1">{card.subtitle}</Typography>
-          <Typography>{card.description}</Typography>
-          <Grid container spacing={2} sx={{ marginTop: 2 }}>
-          </Grid>
-          <Grid item xs={6}>
-            <Divider variant="inset" />
-            <Typography>
-              <strong>Address:</strong>{' '}
-              {`${card.address.street} ${card.address.houseNumber}, ${card.address.city}, ${card.address.country}`}
-            </Typography>
-            <Typography>
-              <strong>ZIP:</strong> {card.address.zip}
-            </Typography>
-            <Typography>
-              <strong>BizNumber:</strong> {card.bizNumber}
-            </Typography>
-          </Grid>
-          <Grid item xs={6} >
-
-            <img src={card.image.url} alt={card.image.alt} style={{ maxWidth: "60%", marginTop: '2rem', scale: "revert" }} />
-          </Grid>
-
-          <Paper variant="outlined" square>
-            <Grid item xs={6}  >
-              <Typography>
-                <IconButton
-                  aria-label="phone"
-                >
-                  <PhoneIcon  ></PhoneIcon>
-                  <strong>Phone:</strong> {card.phone}
-                </IconButton>
+        <Paper elevation={3} sx={{ padding: 4, position: "relative", minHeight: "92vh" }}>
+          <Grid container spacing={4} alignItems="center">
+            <Grid item lg={6} xs={12} md={6}>
+              <div style={{ position: 'relative', paddingTop: '75%', overflow: 'hidden', borderRadius: '8px' }}>
+                <img src={card.image.url} alt={card.image.alt} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+            </Grid>
+            <Grid item lg={3} xs={12} md={3}>
+              <Divider variant="middle" sx={{ marginBottom: 2 }} />
+              <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{card.title}</Typography>
+              <Typography variant="subtitle1" sx={{ fontStyle: 'italic', color: 'gray', marginBottom: 2 }}>
+                {card.subtitle}
               </Typography>
-              <Typography>
-                <IconButton>
-                  <Email  ></Email>
-                  <strong>Email:</strong> {card.email}
-                </IconButton>
+              <Typography sx={{ marginBottom: 2 }}>{card.description}</Typography>
+              <Divider variant="middle" sx={{ marginBottom: 2 }} />
+              <Typography variant="h5" sx={{ fontWeight: 'bold' }}>Contact Information:</Typography>
+              <Typography variant="body1" sx={{ marginBottom: 1 }}>
+                <strong>Phone:</strong> {card.phone}
               </Typography>
-              <Typography>
-                <IconButton>
-                  <Web></Web>
-                  <strong>Website:</strong>{' '}
-                  <Link href={card.web}>{card.web}</Link>
-                </IconButton>
+              <Typography variant="body1" sx={{ marginBottom: 1 }}>
+                <strong>Email:</strong> {card.email}
+              </Typography>
+              <Typography variant="body1">
+                <strong>Website:</strong> <Link href={card.web}>{card.web}</Link>
               </Typography>
             </Grid>
-          </Paper>
+            <Grid item lg={3} xs={12} md={3}>
+              <Divider variant="middle" sx={{ marginBottom: 2 }} />
+              <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{"Address"}</Typography>
+              <Typography sx={{ marginBottom: 2 }}>{card.address.country}</Typography>
+              <Typography sx={{ marginBottom: 2 }}>{card.address.city}</Typography>
+              <Typography sx={{ marginBottom: 2 }}>{card.address.street}</Typography>
+              <Typography sx={{ marginBottom: 2 }}>{card.address.houseNumber}</Typography>
+              <Typography sx={{ marginBottom: 2 }}>{card.address.zip}</Typography>
+            </Grid>
+          </Grid>
 
           {user && (user._id === card.user_id || user.isAdmin === true) && (
-
             <SpeedDial
               ariaLabel="SpeedDial basic example"
               sx={{
-                position: 'fixed !important',
+                position: 'fixed',
                 bottom: '15vh',
                 right: '2vw',
               }}
@@ -168,14 +151,12 @@ const CardDetailPage = () => {
                 <SpeedDialAction
                   key={action.name}
                   icon={action.icon}
-
-
                 />
               ))}
             </SpeedDial>
           )}
-
         </Paper>
+
 
       }
       <CardDeleteDialog

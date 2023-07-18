@@ -9,7 +9,7 @@ const Main = ({ children }) => {
     <Paper
       sx={{
         minHeight: "90vh",
-        backgroundColor: isDark ? "#666666" : "#e3f2fd",
+        backgroundColor: isDark ? "#666666" : "#ffffff",
       }}>
       {children}
     </Paper>

@@ -2,6 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 import PageHeader from "../components/PageHeader";
 import Grid from "@mui/material/Grid";
+import { Paper } from "@mui/material";
 
 const AboutPage = () => {
   return (
@@ -13,24 +14,20 @@ const AboutPage = () => {
 
       <Grid container spacing={2}>
         <Grid item xs={12} md={8} alignSelf="center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ea quasi
-          magnam rem velit cumque facilis minus iste, similique at placeat
-          adipisci reiciendis! Quibusdam pariatur voluptatibus suscipit,
-          laboriosam earum sint asperiores, est velit voluptatem aspernatur
-          quisquam modi quas, eligendi ad hic! Laborum deserunt quis, atque
-          quam, sapiente maxime repellat voluptatem deleniti obcaecati aperiam
-          ipsum! Iure, saepe! Voluptatibus harum, animi sapiente quas dolore,
-          cum nam adipisci officiis inventore aperiam omnis aut fuga nemo
-          perferendis tenetur? Debitis nihil facere quos? Debitis molestias quae
-          voluptatum. Eius perferendis necessitatibus sed consequatur possimus
-          ipsam odio, eos ab, enim corporis explicabo aspernatur consequuntur
-          saepe quo facilis et voluptatem qui, ut quae! Reiciendis similique
-          exercitationem ipsa. Aliquam quam eum ad, non delectus ducimus soluta
-          numquam, molestiae fugiat sit odit! Repudiandae quaerat deserunt totam
-          praesentium eaque voluptatem pariatur neque porro, accusantium
-          consequuntur, exercitationem quisquam? Itaque praesentium beatae
-          consectetur, quisquam facilis qui laboriosam voluptate maxime
-          cupiditate voluptas et nisi?
+          <Paper
+            variant="outlined"
+            sx={{ padding: 3 }}
+          >
+            Description:
+
+            The website is a platform that showcases business cards to users. Regular users can browse the site and view information about various businesses and like the cards they are interested in. Business users have the additional capability to create new business cards and add relevant information. Admin users can manage the different users, edit or delete them, and change their status to business users or vice versa.
+
+            The technologies used to build the website include React.js and Node.js for the client-side and server-side respectively, along with JavaScript as the programming language. The site also utilizes the MUI (Material-UI) library to provide pre-designed styles and components.
+
+            The design of the website is pleasant and calming, allowing users to focus on the content and their actions in a comfortable and clear manner.
+
+            The website primarily focuses on presenting business information, and there are no additional content sections apart from the business data itself.
+          </Paper>
         </Grid>
         <Grid
           item
