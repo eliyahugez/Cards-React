@@ -5,7 +5,7 @@ const UseCallback = () => {
     const [dark, setDark] = useState(false);
 
     const getItems = useCallback(() => {
-        // super long computation or fetching data from an API
+
         return [number, number + 1, number + 2];
     }, []);
 

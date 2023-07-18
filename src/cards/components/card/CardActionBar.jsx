@@ -23,7 +23,6 @@ const CardActionBar = ({ cardId, onDelete, onLike, cardUserId, cardLikes }) => {
   const { handleLikeCard } = useCards();
   const [isLike, setLike] = useState(() => {
     if (!user) return false;
-    // return !!cardLikes.find(id => id === user._id)
     return cardLikes.includes(user._id)
   });
 

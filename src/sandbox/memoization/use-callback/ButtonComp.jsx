@@ -17,4 +17,4 @@ ButtonComp.propTypes = {
 };
 
 export default ButtonComp;
-// export default React.memo(ButtonComp);
+

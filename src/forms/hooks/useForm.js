@@ -20,7 +20,7 @@ const useForm = (initialForm, schema, handleSubmit) => {
     }, [schema]);
 
     const handleChange = useCallback(
-        ({ target }) => {//target = <input name="username" value="naor"></input>
+        ({ target }) => {
             const { name, value } = target;
             const errorMessage = validateProperty(target);
             if (errorMessage)

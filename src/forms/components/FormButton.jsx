@@ -3,13 +3,13 @@ import { bool, func, node, string } from "prop-types"
 import { memo } from "react"
 
 const FormButton = ({
-    variant, // string - contained
-    component, // string - button
-    size, // string - medium
-    color, // string - primary
-    onClick, // func
-    disabled, // bool - false
-    node // node
+    variant,
+    component,
+    size,
+    color,
+    onClick,
+    disabled,
+    node
 }) => {
 
     return (

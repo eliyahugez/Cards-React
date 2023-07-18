@@ -22,7 +22,7 @@ const MyCardsPage = () => {
   }, [user]);
   snack("Only a Business User can add a new card", 'warning')
   const onDeleteCard = async (cardId) => {
-    await handleDeleteCard(cardId); // this will delete the card from the DB
+    await handleDeleteCard(cardId);
     await handleGetMyCards();
   };
 

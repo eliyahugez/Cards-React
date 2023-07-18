@@ -7,10 +7,9 @@ const Loops = () => {
   return (
     <Box m={2}>
       {
-      array.map((item, index, array) => {
-        // console.log(array);
-        return <Box key={index}>item: {item}</Box>;
-      })
+        array.map((item, index, array) => {
+          return <Box key={index}>item: {item}</Box>;
+        })
       }
     </Box>
   );

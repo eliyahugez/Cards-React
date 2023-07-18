@@ -16,9 +16,9 @@ const useCards = () => {
     const [isPending, setPending] = useState(false);
     const { user } = useUser();
 
-    const [query, setQuery] = useState(""); // the query by, ex: title, bizNumber
-    const [filteredCards, setFilteredCards] = useState(null);// the cards filtered by query
-    const [searchParams] = useSearchParams(); // the search params from the url
+    const [query, setQuery] = useState("");
+    const [filteredCards, setFilteredCards] = useState(null);
+    const [searchParams] = useSearchParams(); 
 
     const snack = useSnackbar();
     const navigate = useNavigate();
@@ -129,7 +129,7 @@ const useCards = () => {
             setPending(true);
             const cards = await getCards();
             const favCards = cards.filter(
-                card => !!card.likes.find(id => id === user._id)// change to use includes
+                card => !!card.likes.find(id => id === user._id) 
             );
             requestStatus(false, null, favCards);
         } catch (error) {

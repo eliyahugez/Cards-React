@@ -5,7 +5,7 @@ export const SetArray = () => {
   const [task, setTask] = useState(INITIAL_TODO);
   const [tasks, setTasks] = useState([]);
 
-  // immutable - can't be changed
+
   const createNewTask = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -29,9 +29,9 @@ export const SetArray = () => {
 
       <ul>
         {tasks.map((task, index) => (
-            <li key={index}>
-               {index + 1}. {task.todo}
-            </li>
+          <li key={index}>
+            {index + 1}. {task.todo}
+          </li>
         ))}
       </ul>
     </div>

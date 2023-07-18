@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-const ChildPropsString = (props) => { // 
+const ChildPropsString = (props) => {
 
   const { moshe } = props;
 
