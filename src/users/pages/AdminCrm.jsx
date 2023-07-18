@@ -50,9 +50,6 @@ const AdminCrm = () => {
         }
     };
 
-
-
-
     const handleIsBusinessChange = async (event, user) => {
         const updatedUser = { ...user, isBusiness: event.target.checked };
         setIsB(event.target.checked);
@@ -69,7 +66,6 @@ const AdminCrm = () => {
             }
         };
     }
-
 
     return (
         <>
