@@ -29,6 +29,7 @@ import EditCardPage from "../cards/pages/EditCardPage";
 import FavCardsPage from "../cards/pages/FavCardsPage";
 import EditUserPage from "../users/pages/EditUserPage";
 import AdminCrm from "../users/pages/AdminCrm";
+import UserInfo from "../users/pages/UserInfo";
 
 const Router = () => {
   return (
@@ -36,6 +37,7 @@ const Router = () => {
       <Route path={ROUTES.ABOUT} element={<AboutPage />} />
       <Route path={ROUTES.EDIT_USER} element={<EditUserPage />} />
       <Route path={ROUTES.ROOT} element={<CardsPage />} />
+      <Route path={ROUTES.USER_PROFILE} element={<UserInfo />} />
       <Route path={ROUTES.CARDS} element={<CardsPage />} />
       <Route path={`${ROUTES.CARD_INFO}/:id`} element={<CardDetailPage />} /> {/** /card-info/kjshdf98sdf98s */}
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />

@@ -101,8 +101,8 @@ const CardDetailPage = () => {
   return (
     <>
       {card &&
-        <Paper elevation={3} sx={{ padding: 2 }}>
-          <Typography spacing={2} sx={{ marginTop: 2 }} variant="h3">Welcome to our Card Page </Typography>
+        <Paper elevation={3} sx={{ padding: 2, position: "relative", minHeight: "92vh" }}>
+          <Typography spacing={2} sx={{ marginTop: 2 }} variant="h3">Card Business Page </Typography>
           <Divider variant="middle" />
           <Typography variant="h5">{card.title}</Typography>
           <Typography variant="subtitle1">{card.subtitle}</Typography>
@@ -132,8 +132,7 @@ const CardDetailPage = () => {
               <Typography>
                 <IconButton
                   aria-label="phone"
-                  className='icon_for_card_detail'>
-
+                >
                   <PhoneIcon  ></PhoneIcon>
                   <strong>Phone:</strong> {card.phone}
                 </IconButton>
@@ -159,10 +158,9 @@ const CardDetailPage = () => {
             <SpeedDial
               ariaLabel="SpeedDial basic example"
               sx={{
-                position: 'fixed',
-                bottom: '5%',
-                right: '5%',
-                transform: 'translateX(100%)'
+                position: 'fixed !important',
+                bottom: '15vh',
+                right: '2vw',
               }}
               icon={<SpeedDialIcon />}
             >

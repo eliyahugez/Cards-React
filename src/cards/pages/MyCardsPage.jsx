@@ -38,9 +38,9 @@ const MyCardsPage = () => {
           color="primary"
           aria-label="add"
           sx={{
-            position: "absolute",
-            bottom: 75,
-            right: 16,
+            position: 'fixed !important',
+            bottom: '15vh',
+            right: '2vw',
           }}
         >
           <AddIcon />
