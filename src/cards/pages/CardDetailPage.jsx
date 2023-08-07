@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Typography, Paper, Grid, Link, IconButton, SpeedDial, SpeedDialIcon, SpeedDialAction, Divider } from '@mui/material';
-import PhoneIcon from '@mui/icons-material/Phone';
+
 import { useNavigate, useParams } from 'react-router-dom';
 import useCards from '../hooks/useCards';
-import { Call, Delete, Email, Favorite, ModeEdit, Web } from '@mui/icons-material';
+import { Call, Delete, Favorite, ModeEdit } from '@mui/icons-material';
 import { useUser } from '../../users/providers/UserProvider';
 import CardDeleteDialog from '../components/card/CardDeleteDialog';
 import { deleteCard, getCard } from '../services/cardApiService'

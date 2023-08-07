@@ -7,13 +7,13 @@ import { useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import ROUTES from "../../routes/routesModel";
 import { useUser } from "../../users/providers/UserProvider";
-import { useSnackbar } from "../../providers/SnackbarProvider";
+
 
 const CardsPage = () => {
   const { value, handleGetCards, handleDeleteCard } = useCards();
-  const { cards, error, isPending, filteredCards } = value;
+  const {  error, isPending, filteredCards } = value;
   const navigate = useNavigate();
-  const snack = useSnackbar();
+
   const { user } = useUser();
   useEffect(() => {
     handleGetCards();

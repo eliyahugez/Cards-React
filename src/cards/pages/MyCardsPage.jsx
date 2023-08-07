@@ -20,7 +20,7 @@ const MyCardsPage = () => {
     if (!user) navigate(ROUTES.CARDS);
     else handleGetMyCards();
   }, [user]);
-  snack("Only a Business User can add a new card", 'warning')
+
   const onDeleteCard = async (cardId) => {
     await handleDeleteCard(cardId);
     await handleGetMyCards();

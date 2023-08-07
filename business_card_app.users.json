@@ -1,0 +1,200 @@
+[{
+  "_id": {
+    "$oid": "64a66df3dbf47e02fa6d9d20"
+  },
+  "name": {
+    "first": "business",
+    "middle": "",
+    "last": "user",
+    "_id": {
+      "$oid": "64a66df3dbf47e02fa6d9d21"
+    }
+  },
+  "phone": "050-0000000",
+  "email": "eliyahu22@gmail.com",
+  "password": "$2a$10$UmIUqqH5KumtAdcwNnJXb.IDdeizqqZzaO3IYcM3vdHmkliG2WIlG",
+  "image": {
+    "url": "https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_960_720.png",
+    "alt": "business card image",
+    "_id": {
+      "$oid": "64a66df3dbf47e02fa6d9d22"
+    }
+  },
+  "address": {
+    "state": "not defined",
+    "country": "israel",
+    "city": "tel-aviv",
+    "street": "magnive",
+    "houseNumber": 5,
+    "zip": 0,
+    "_id": {
+      "$oid": "64a66df3dbf47e02fa6d9d23"
+    }
+  },
+  "isAdmin": false,
+  "isBusiness": true,
+  "createdAt": {
+    "$date": "2023-07-06T07:32:03.934Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ae5aa653a6e2a695416b9d"
+  },
+  "name": {
+    "first": "שירן",
+    "middle": "",
+    "last": "גז",
+    "_id": {
+      "$oid": "64ae5aa653a6e2a695416b9e"
+    }
+  },
+  "phone": "0524501974",
+  "email": "eliyahugez234@gmail.com",
+  "password": "$2a$10$Lnf45595ImGsOiZmCVIyYeiv0VJsTnmpYVCtVG4ZW3omv/cuN.iCG",
+  "image": {
+    "url": "https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_960_720.png",
+    "alt": "business card image",
+    "_id": {
+      "$oid": "64ae5aa653a6e2a695416b9f"
+    }
+  },
+  "address": {
+    "state": "not defined",
+    "country": "234",
+    "city": "אבני חפץ",
+    "street": "קדם",
+    "houseNumber": 11,
+    "zip": 4486100,
+    "_id": {
+      "$oid": "64ae5aa653a6e2a695416ba0"
+    }
+  },
+  "isAdmin": false,
+  "isBusiness": true,
+  "createdAt": {
+    "$date": "2023-07-12T07:47:50.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b42d0d76a5389afd67d121"
+  },
+  "name": {
+    "first": "אליהו",
+    "middle": "",
+    "last": "גז",
+    "_id": {
+      "$oid": "64b42d0d76a5389afd67d122"
+    }
+  },
+  "phone": "0558977852",
+  "email": "eliyahugez@gmail.com",
+  "password": "$2a$10$/i.N08ppxDXGilX8ll6SBOH1BKTjcgPhp/ZpCCVvKFAjZHjppynSu",
+  "image": {
+    "url": "https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_960_720.png",
+    "alt": "business card image",
+    "_id": {
+      "$oid": "64b42d0d76a5389afd67d123"
+    }
+  },
+  "address": {
+    "state": "not defined",
+    "country": "ישראל",
+    "city": "אבני חפץ - avney hefezt",
+    "street": "קדם",
+    "houseNumber": 11,
+    "zip": 4486100,
+    "_id": {
+      "$oid": "64b42d0d76a5389afd67d124"
+    }
+  },
+  "isAdmin": true,
+  "isBusiness": true,
+  "createdAt": {
+    "$date": "2023-07-16T17:46:53.176Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b4369039d3e8ff8281d7ff"
+  },
+  "name": {
+    "first": "admin",
+    "middle": "",
+    "last": "user",
+    "_id": {
+      "$oid": "64b4369039d3e8ff8281d800"
+    }
+  },
+  "phone": "050-0000000",
+  "email": "eliyahu33@gmail.com",
+  "password": "$2a$10$vFucapu8EiNFk5tsRqlSs.JTeYVo7FXorcFUs6Ayoreh860ALst7y",
+  "image": {
+    "url": "https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_960_720.png",
+    "alt": "business card image",
+    "_id": {
+      "$oid": "64b4369039d3e8ff8281d801"
+    }
+  },
+  "address": {
+    "state": "not defined",
+    "country": "israel",
+    "city": "tel-aviv",
+    "street": "magnive",
+    "houseNumber": 5,
+    "zip": 0,
+    "_id": {
+      "$oid": "64b4369039d3e8ff8281d802"
+    }
+  },
+  "isAdmin": true,
+  "isBusiness": false,
+  "createdAt": {
+    "$date": "2023-07-16T18:27:28.396Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b54d2eb30e6b3e6d839cc1"
+  },
+  "name": {
+    "first": "regular",
+    "middle": "",
+    "last": "user",
+    "_id": {
+      "$oid": "64b54d2eb30e6b3e6d839cc2"
+    }
+  },
+  "phone": "050-0000000",
+  "email": "eliyahu11@gmail.com",
+  "password": "$2a$10$Qyph.Sdoje8Sr4bLiAosn.WV.luApisKmCIgrpewoX4z2v9iX0oDy",
+  "image": {
+    "url": "https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_960_720.png",
+    "alt": "business card image",
+    "_id": {
+      "$oid": "64b54d2eb30e6b3e6d839cc3"
+    }
+  },
+  "address": {
+    "state": "not defined",
+    "country": "israel",
+    "city": "tel-aviv",
+    "street": "magnive",
+    "houseNumber": 5,
+    "zip": 0,
+    "_id": {
+      "$oid": "64b54d2eb30e6b3e6d839cc4"
+    }
+  },
+  "isAdmin": false,
+  "isBusiness": true,
+  "createdAt": {
+    "$date": "2023-07-17T14:16:14.609Z"
+  },
+  "__v": 0
+}]
